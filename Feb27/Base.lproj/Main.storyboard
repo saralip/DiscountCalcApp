@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uf4-7q-Jzx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mBa-4F-II2">
+            <objects>
+                <navigationController id="uf4-7q-Jzx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1XQ-82-YwF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YUu-bC-nKD" kind="relationship" relationship="rootViewController" id="wmH-3V-Z7O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2B-hF-NKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-371" y="124"/>
+        </scene>
+        <!--Calculator-->
+        <scene sceneID="YdT-Qy-Lkw">
+            <objects>
+                <viewController id="YUu-bC-nKD" customClass="CalculatorViewController" customModule="Feb27" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="28L-0x-3Q0"/>
+                        <viewControllerLayoutGuide type="bottom" id="xYr-Z2-3F5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Md5-1L-V4b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calculator" id="B4f-Ei-7aS"/>
+                    <connections>
+                        <segue destination="ev6-Qj-8XE" kind="show" identifier="showResults" id="6m4-vW-IGA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8U-lh-paV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="124"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="nEG-wL-iqj">
+            <objects>
+                <viewController id="ev6-Qj-8XE" customClass="ResultsViewController" customModule="Feb27" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2UB-xA-CGn"/>
+                        <viewControllerLayoutGuide type="bottom" id="cAP-m8-o5d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p8h-6A-jJa" customClass="GraphView" customModule="Feb27" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Results" id="ETJ-0V-gMm"/>
+                    <connections>
+                        <segue destination="kc9-nn-MAD" kind="unwind" identifier="unwindToCalc" unwindAction="unwindToCalcWithSegue:" id="uyX-ZS-Z0J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyE-bu-m75" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kc9-nn-MAD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="124"/>
+        </scene>
+    </scenes>
+</document>
